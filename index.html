@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="fav.png">
+  <title>My-Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+
+  <!--nav-->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo">&lt;<span>dev</span>/Jero&gt;</a>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact-section">Contact</a></li>
+    </ul>
+
+    
+    <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  
+  <div class="nav-mobile-menu" id="mobileMenu">
+    <a href="#about"           class="mobile-link">About</a>
+    <a href="#projects"        class="mobile-link">Projects</a>
+    <a href="#skills"          class="mobile-link">Skills</a>
+    <a href="#contact-section" class="mobile-link">Contact</a>
+  </div>
+
+
+  <!--herooo -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Available for work</div>
+
+      <h1>
+        Front-End<br>
+        <span class="line2">Developer</span><br>
+        <span class="accent">&amp; Builder.</span>
+      </h1>
+
+      <p class="hero-desc">
+        I craft performant, elegant digital experiences — from APIs to pixel-perfect UIs.
+        Turning complex problems into clean, scalable solutions.
+      </p>
+
+      <div class="hero-cta">
+        <a href="#projects"        class="btn btn-primary">View Work</a>
+        <a href="#contact-section" class="btn btn-outline">Get in Touch</a>
+      </div>
+
+      <!-- Mobile stats:-->
+      <div class="hero-stats-mobile">
+        <div class="stat">
+          <div class="stat-num">4+</div>
+          <div class="stat-label">Years Exp.</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">15+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">12+</div>
+          <div class="stat-label">Clients</div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Desktop stats -->
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">4+</div>
+        <div class="stat-label">Years Exp.</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15+</div>
+        <div class="stat-label">Projects</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">12+</div>
+        <div class="stat-label">Clients</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About--->
+  <section id="about">
+    <div class="section-label">01 — About</div>
+
+    <div class="about-grid reveal">
+
+      <div class="about-text">
+        <p>Hi, I'm <strong>Samuel Tetteh Martey</strong>, a <strong>front-end developer</strong> with a passion for building high-quality software that truly connects with users. From dynamic real estate platforms to fast-paced web games, I turn complex ideas into clean, scalable digital products.</p>
+
+        <p>I am constantly expanding my toolkit across the full development lifecycle. While my core strength lies in modern front-end technologies, I have a deep and growing interest in <strong>cloud computing</strong> and building robust, user-centric interfaces.</p>
+
+        <p>I believe the best code is the code that's <strong>never written</strong> — prioritizing elegant simplicity over unnecessary complexity.</p>
+      </div>
+
+      <div class="terminal">
+        <div class="terminal-bar">
+          <div class="dot red"></div>
+          <div class="dot yellow"></div>
+          <div class="dot green"></div>
+        </div>
+        <div class="terminal-body">
+         <div class="line"><span class="prompt">~$</span><span class="cmd">whoami</span></div>
+          <div class="output highlight">samuel-tetteh-martey --alias devjero</div>
+          <div class="line"><span class="prompt">~$</span><span class="cmd">cat values.txt</span></div>
+          <div class="output">clean code · hci · cloud architecture</div>
+          <div class="output">a3f1c2e refactor auth service</div>
+          <div class="output">b8d9012 add real-time notifications</div>
+          <div class="output">c4e7a90 optimize DB queries 40%</div>
+          <div class="output">d1f3b88 ship new dashboard UI</div>
+          <div class="output">e9c2d14 init project</div>
+          <div class="line"><span class="prompt">~$</span><span class="cmd">echo $STATUS</span></div>
+          <div class="output highlight">open-to-work ✓</div>
+          <div class="line">
+            <span class="prompt" style="color:var(--accent)">~$</span>
+            <span class="cmd"><span class="blink-cursor">█</span></span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Projects -->
+  <section id="projects">
+    <div class="section-label">02 — Projects</div>
+    <h2>Selected <span style="color:var(--accent)">Work.</span></h2>
+
+    <div class="projects-grid">
+
+      <div class="project-card featured reveal">
+        <div class="project-num">001 — Featured</div>
+        <div class="project-title">GenzVibe</div>
+        <div class="project-desc">An anonymous social platform built for Gen Z — post thoughts, 
+        react to vibes, and connect without the pressure of identity. 
+        Features real-time feeds, live interactions, and a clean UI 
+      designed for speed and self-expression.</div>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Vanilla JS</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Cloud Firestore</span>
+        </div>
+        <a href="https://genzvibe.vercel.app/" class="project-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">002</div>
+        <div class="project-title">Real Estate Site</div>
+        <div class="project-desc">A modern, fully responsive real estate platform showcasing property listings with dynamic search and filtering. Designed with a sleek, conversion-focused UI that works seamlessly across desktop and mobile.</div>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+        <a href="https://estate-site-six.vercel.app/" class="project-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">003</div>
+        <div class="project-title">School Webpage</div>
+        <div class="project-desc">A clean, professional school web presence built under the DevJero brand. Demonstrates real-world client work — structured content, intuitive navigation, and a polished design that represents an institution with credibility.</div>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">Tailwind CSS</span>
+        </div>
+        <a href="https://school-demo-ochre.vercel.app/" class="project-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">004</div>
+        <div class="project-title">Event Management</div>
+        <div class="project-desc">A cloud-connected event management system with full user authentication, role-based admin access, live statistics, and push notifications to registered users. Solves a real institutional problem — tracking and communicating school events at scale.</div>
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">Firebase</span>
+        </div>
+        <a href="https://jerogh.github.io/Schoolevent/" class="project-link">View Project →</a>
+      </div>
+
+      <div class="project-card reveal">
+        <div class="project-num">005</div>
+        <div class="project-title">Webapp Game Catch it</div>
+        <div class="project-desc">
+        A fast-paced browser game built purely for fun — catch the 
+        moving target before the 30-second timer runs out. Features 
+        a live score tracker, personal high score, and a leaderboard. 
+        Sometimes the best projects are the ones that just make 
+        people smile😂
+        </div>
+        <div class="project-tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+        <a href="https://jerogh.github.io/catchit/" class="project-link">View Project →</a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Skills-->
+  <section id="skills">
+    <div class="section-label">03 — Skills</div>
+
+    <div class="skills-layout reveal">
+      <div class="skills-intro">
+        <h2>Tech<br><span style="color:var(--accent)">Stack.</span></h2>
+        <p>My toolkit spans the full development lifecycle — from architecting systems to shipping polished UIs.</p>
+        <p>I pick the right tool for the job, not the trendy one.</p>
+      </div>
+
+      <div class="skills-categories">
+        <div>
+          <div class="skills-category-title">Frontend</div>
+          <div class="skills-list">
+            <div class="skill-pill"><span class="skill-dot"></span>React</div>
+            <div class="skill-pill"><span class="skill-dot"></span>TypeScript</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Next.js</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Tailwind CSS</div>
+            <div class="skill-pill"><span class="skill-dot"></span>HTML</div>
+            <div class="skill-pill"><span class="skill-dot"></span>CSS</div>
+          </div>
+        </div>
+        <div>
+          <div class="skills-category-title">Backend</div>
+          <div class="skills-list">
+            <div class="skill-pill"><span class="skill-dot"></span>Node.js</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Python</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Go</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Firebase</div>
+            <div class="skill-pill"><span class="skill-dot"></span>Cloud Firestore</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- my contact -->
+  <section id="contact-section">
+    <div class="section-label">04 — Contact</div>
+
+    <div class="contact-grid">
+
+      <div class="contact-info reveal">
+        <h2>Let's Build<br><span style="color:var(--accent)">Together.</span></h2>
+        <p>Have a project in mind or want to discuss an opportunity?
+          I'm always open to interesting conversations and collaborations.</p>
+        <div class="contact-links">
+          <a href="mailto:jerosammy5@gmail.com" class="contact-link">
+            <span class="contact-icon">✉</span> jerosammy5@gmail.com
+          </a>
+          <a href="https://github.com/JeroGh" target="_blank" class="contact-link">
+            <span class="contact-icon">⌥</span> github.com/JeroGh
+          </a>
+          <a href="https://linkedin.com/in/yourname" target="_blank" class="contact-link">
+            <span class="contact-icon">⊞</span> linkedin.com/in/yourname
+          </a>
+          <a href="https://twitter.com/yourhandle" target="_blank" class="contact-link">
+            <span class="contact-icon">◈</span> 0274254825
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form reveal">
+        <div class="form-group">
+          <label class="form-label">Name</label>
+          <input type="text" class="form-input" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-input" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Message</label>
+          <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
+        </div>
+        <button class="btn btn-primary btn-send" onclick="handleSend(this)">Send Message</button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- footer-->
+  <footer>
+    <p>© 2026 — Designed &amp; Built by DevJero</p>
+    <div class="footer-status">
+      <div class="status-dot"></div>
+      Available for new projects
+    </div>
+  </footer>
+
+  <!--script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
