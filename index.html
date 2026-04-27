@@ -7,10 +7,12 @@
   <title>My-Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+
+  <!-- EmailJS — sends real emails from the contact form, no backend needed -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
-  
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
@@ -26,7 +28,6 @@
       <li><a href="#contact-section">Contact</a></li>
     </ul>
 
-    
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span>
       <span></span>
@@ -34,7 +35,6 @@
     </button>
   </nav>
 
-  
   <div class="nav-mobile-menu" id="mobileMenu">
     <a href="#about"           class="mobile-link">About</a>
     <a href="#projects"        class="mobile-link">Projects</a>
@@ -43,7 +43,7 @@
   </div>
 
 
-  <!--herooo -->
+  <!--hero-->
   <section id="hero">
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
@@ -67,7 +67,7 @@
         <a href="#contact-section" class="btn btn-outline">Get in Touch</a>
       </div>
 
-      <!-- Mobile stats:-->
+      <!-- Mobile stats -->
       <div class="hero-stats-mobile">
         <div class="stat">
           <div class="stat-num">4+</div>
@@ -84,7 +84,7 @@
       </div>
     </div>
 
-  <!-- Desktop stats -->
+    <!-- Desktop stats -->
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-num">4+</div>
@@ -102,7 +102,7 @@
   </section>
 
 
-  <!-- About--->
+  <!-- About -->
   <section id="about">
     <div class="section-label">01 — About</div>
 
@@ -110,9 +110,7 @@
 
       <div class="about-text">
         <p>Hi, I'm <strong>Samuel Tetteh Martey</strong>, a <strong>front-end developer</strong> with a passion for building high-quality software that truly connects with users. From dynamic real estate platforms to fast-paced web games, I turn complex ideas into clean, scalable digital products.</p>
-
         <p>I am constantly expanding my toolkit across the full development lifecycle. While my core strength lies in modern front-end technologies, I have a deep and growing interest in <strong>cloud computing</strong> and building robust, user-centric interfaces.</p>
-
         <p>I believe the best code is the code that's <strong>never written</strong> — prioritizing elegant simplicity over unnecessary complexity.</p>
       </div>
 
@@ -123,7 +121,7 @@
           <div class="dot green"></div>
         </div>
         <div class="terminal-body">
-         <div class="line"><span class="prompt">~$</span><span class="cmd">whoami</span></div>
+          <div class="line"><span class="prompt">~$</span><span class="cmd">whoami</span></div>
           <div class="output highlight">samuel-tetteh-martey --alias devjero</div>
           <div class="line"><span class="prompt">~$</span><span class="cmd">cat values.txt</span></div>
           <div class="output">clean code · hci · cloud architecture</div>
@@ -155,17 +153,17 @@
       <div class="project-card featured reveal">
         <div class="project-num">001 — Featured</div>
         <div class="project-title">GenzVibe</div>
-        <div class="project-desc">An anonymous social platform built for Gen Z — post thoughts, 
-        react to vibes, and connect without the pressure of identity. 
-        Features real-time feeds, live interactions, and a clean UI 
-      designed for speed and self-expression.</div>
+        <div class="project-desc">An anonymous social platform built for Gen Z — post thoughts,
+        react to vibes, and connect without the pressure of identity.
+        Features real-time feeds, live interactions, and a clean UI
+        designed for speed and self-expression.</div>
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">Vanilla JS</span>
           <span class="tag">Firebase</span>
           <span class="tag">Cloud Firestore</span>
         </div>
-        <a href="https://genzvibe.vercel.app/" class="project-link">View Project →</a>
+        <a href="https://genzvibe.vercel.app/" target="_blank" class="project-link">View Project →</a>
       </div>
 
       <div class="project-card reveal">
@@ -176,7 +174,7 @@
           <span class="tag">React</span>
           <span class="tag">Tailwind CSS</span>
         </div>
-        <a href="https://estate-site-six.vercel.app/" class="project-link">View Project →</a>
+        <a href="https://estate-site-six.vercel.app/" target="_blank" class="project-link">View Project →</a>
       </div>
 
       <div class="project-card reveal">
@@ -187,7 +185,7 @@
           <span class="tag">React</span>
           <span class="tag">Tailwind CSS</span>
         </div>
-        <a href="https://school-demo-ochre.vercel.app/" class="project-link">View Project →</a>
+        <a href="https://school-demo-ochre.vercel.app/" target="_blank" class="project-link">View Project →</a>
       </div>
 
       <div class="project-card reveal">
@@ -199,32 +197,29 @@
           <span class="tag">FastAPI</span>
           <span class="tag">Firebase</span>
         </div>
-        <a href="https://jerogh.github.io/Schoolevent/" class="project-link">View Project →</a>
+        <a href="https://jerogh.github.io/Schoolevent/" target="_blank" class="project-link">View Project →</a>
       </div>
 
       <div class="project-card reveal">
         <div class="project-num">005</div>
         <div class="project-title">Webapp Game Catch it</div>
-        <div class="project-desc">
-        A fast-paced browser game built purely for fun — catch the 
-        moving target before the 30-second timer runs out. Features 
-        a live score tracker, personal high score, and a leaderboard. 
-        Sometimes the best projects are the ones that just make 
-        people smile😂
-        </div>
+        <div class="project-desc">A fast-paced browser game built purely for fun — catch the
+        moving target before the 30-second timer runs out. Features
+        a live score tracker, personal high score, and a leaderboard.
+        Sometimes the best projects are the ones that just make people smile 😂</div>
         <div class="project-tags">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
           <span class="tag">JavaScript</span>
         </div>
-        <a href="https://jerogh.github.io/catchit/" class="project-link">View Project →</a>
+        <a href="https://jerogh.github.io/catchit/" target="_blank" class="project-link">View Project →</a>
       </div>
 
     </div>
   </section>
 
 
-  <!-- Skills-->
+  <!-- Skills -->
   <section id="skills">
     <div class="section-label">03 — Skills</div>
 
@@ -255,7 +250,6 @@
             <div class="skill-pill"><span class="skill-dot"></span>Go</div>
             <div class="skill-pill"><span class="skill-dot"></span>Firebase</div>
             <div class="skill-pill"><span class="skill-dot"></span>Cloud Firestore</div>
-
           </div>
         </div>
       </div>
@@ -263,7 +257,7 @@
   </section>
 
 
-  <!-- my contact -->
+  <!-- Contact -->
   <section id="contact-section">
     <div class="section-label">04 — Contact</div>
 
@@ -283,7 +277,7 @@
           <a href="https://linkedin.com/in/yourname" target="_blank" class="contact-link">
             <span class="contact-icon">⊞</span> linkedin.com/in/yourname
           </a>
-          <a href="https://twitter.com/yourhandle" target="_blank" class="contact-link">
+          <a href="tel:+233274254825" class="contact-link">
             <span class="contact-icon">◈</span> 0274254825
           </a>
         </div>
@@ -292,15 +286,16 @@
       <div class="contact-form reveal">
         <div class="form-group">
           <label class="form-label">Name</label>
-          <input type="text" class="form-input" placeholder="Your name">
+          <!-- id attributes are required — script.js reads these values to send the email -->
+          <input type="text" id="from_name" class="form-input" placeholder="Your name">
         </div>
         <div class="form-group">
           <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="your@email.com">
+          <input type="email" id="from_email" class="form-input" placeholder="your@email.com">
         </div>
         <div class="form-group">
           <label class="form-label">Message</label>
-          <textarea class="form-textarea" placeholder="Tell me about your project..."></textarea>
+          <textarea id="message" class="form-textarea" placeholder="Tell me about your project..."></textarea>
         </div>
         <button class="btn btn-primary btn-send" onclick="handleSend(this)">Send Message</button>
       </div>
@@ -309,7 +304,7 @@
   </section>
 
 
-  <!-- footer-->
+  <!-- Footer -->
   <footer>
     <p>© 2026 — Designed &amp; Built by DevJero</p>
     <div class="footer-status">
@@ -318,7 +313,6 @@
     </div>
   </footer>
 
-  <!--script -->
   <script src="script.js"></script>
 
 </body>
