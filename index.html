@@ -7,17 +7,6 @@
   <title>My-Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
-  <!--
-    EmailJS — loads as an ES module (no eval, works on GitHub Pages).
-    1. Replace YOUR_PUBLIC_KEY with your key from: EmailJS → Account → API Keys
-    2. The window.emailjs line makes it available to script.js
-  -->
-  <script type="module">
-    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm';
-    window.emailjs = emailjs;
-    emailjs.init('9Fk_ljHZ4WIhbP5mA'); 
-  </script>
 </head>
 <body>
 
@@ -29,14 +18,12 @@
   <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">&lt;<span>dev</span>/Jero&gt;</a>
-
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#contact-section">Contact</a></li>
     </ul>
-
     <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
       <span></span>
       <span></span>
@@ -44,7 +31,6 @@
     </button>
   </nav>
 
-  <!-- Mobile overlay menu -->
   <div class="nav-mobile-menu" id="mobileMenu">
     <a href="#about"           class="mobile-link">About</a>
     <a href="#projects"        class="mobile-link">Projects</a>
@@ -60,54 +46,30 @@
 
     <div class="hero-content">
       <div class="hero-tag">Available for work</div>
-
       <h1>
         Front-End<br>
         <span class="line2">Developer</span><br>
         <span class="accent">&amp; Builder.</span>
       </h1>
-
       <p class="hero-desc">
         I craft performant, elegant digital experiences — from APIs to pixel-perfect UIs.
         Turning complex problems into clean, scalable solutions.
       </p>
-
       <div class="hero-cta">
         <a href="#projects"        class="btn btn-primary">View Work</a>
         <a href="#contact-section" class="btn btn-outline">Get in Touch</a>
       </div>
-
-      <!-- Stats row on mobile -->
       <div class="hero-stats-mobile">
-        <div class="stat">
-          <div class="stat-num">4+</div>
-          <div class="stat-label">Years Exp.</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">15+</div>
-          <div class="stat-label">Projects</div>
-        </div>
-        <div class="stat">
-          <div class="stat-num">12+</div>
-          <div class="stat-label">Clients</div>
-        </div>
+        <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Years Exp.</div></div>
+        <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Projects</div></div>
+        <div class="stat"><div class="stat-num">12+</div><div class="stat-label">Clients</div></div>
       </div>
     </div>
 
-    <!-- Stats column on desktop -->
     <div class="hero-stats">
-      <div class="stat">
-        <div class="stat-num">4+</div>
-        <div class="stat-label">Years Exp.</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">15+</div>
-        <div class="stat-label">Projects</div>
-      </div>
-      <div class="stat">
-        <div class="stat-num">12+</div>
-        <div class="stat-label">Clients</div>
-      </div>
+      <div class="stat"><div class="stat-num">4+</div><div class="stat-label">Years Exp.</div></div>
+      <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Projects</div></div>
+      <div class="stat"><div class="stat-num">12+</div><div class="stat-label">Clients</div></div>
     </div>
   </section>
 
@@ -115,16 +77,13 @@
   <!-- ABOUT -->
   <section id="about">
     <div class="section-label">01 — About</div>
-
     <div class="about-grid reveal">
-
       <div class="about-text">
         <h2>I build things<br>that <span style="color:var(--accent)">work.</span></h2>
         <p>Hi, I'm <strong>Samuel Tetteh Martey</strong>, a <strong>front-end developer</strong> with a passion for building high-quality software that truly connects with users. From dynamic real estate platforms to fast-paced web games, I turn complex ideas into clean, scalable digital products.</p>
         <p>I am constantly expanding my toolkit across the full development lifecycle. While my core strength lies in modern front-end technologies, I have a deep and growing interest in <strong>cloud computing</strong> and building robust, user-centric interfaces.</p>
         <p>I believe the best code is the code that's <strong>never written</strong> — prioritizing elegant simplicity over unnecessary complexity.</p>
       </div>
-
       <div class="terminal">
         <div class="terminal-bar">
           <div class="dot red"></div>
@@ -150,7 +109,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </section>
 
@@ -159,21 +117,15 @@
   <section id="projects">
     <div class="section-label">02 — Projects</div>
     <h2>Selected <span style="color:var(--accent)">Work.</span></h2>
-
     <div class="projects-grid">
 
       <div class="project-card featured reveal">
         <div class="project-num">001 — Featured</div>
         <div class="project-title">GenzVibe</div>
-        <div class="project-desc">An anonymous social platform built for Gen Z — post thoughts,
-          react to vibes, and connect without the pressure of identity.
-          Features real-time feeds, live interactions, and a clean UI
-          designed for speed and self-expression.</div>
+        <div class="project-desc">An anonymous social platform built for Gen Z — post thoughts, react to vibes, and connect without the pressure of identity. Features real-time feeds, live interactions, and a clean UI designed for speed and self-expression.</div>
         <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Vanilla JS</span>
-          <span class="tag">Firebase</span>
-          <span class="tag">Cloud Firestore</span>
+          <span class="tag">React</span><span class="tag">Vanilla JS</span>
+          <span class="tag">Firebase</span><span class="tag">Cloud Firestore</span>
         </div>
         <a href="https://genzvibe.vercel.app/" target="_blank" class="project-link">View Project →</a>
       </div>
@@ -181,12 +133,9 @@
       <div class="project-card reveal">
         <div class="project-num">002</div>
         <div class="project-title">Real Estate Site</div>
-        <div class="project-desc">A modern, fully responsive real estate platform showcasing
-          property listings with dynamic search and filtering. Designed with a sleek,
-          conversion-focused UI that works seamlessly across desktop and mobile.</div>
+        <div class="project-desc">A modern, fully responsive real estate platform showcasing property listings with dynamic search and filtering. Designed with a sleek, conversion-focused UI that works seamlessly across desktop and mobile.</div>
         <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Tailwind CSS</span>
+          <span class="tag">React</span><span class="tag">Tailwind CSS</span>
         </div>
         <a href="https://estate-site-six.vercel.app/" target="_blank" class="project-link">View Project →</a>
       </div>
@@ -194,12 +143,9 @@
       <div class="project-card reveal">
         <div class="project-num">003</div>
         <div class="project-title">School Webpage</div>
-        <div class="project-desc">A clean, professional school web presence built under the
-          DevJero brand. Demonstrates real-world client work — structured content, intuitive
-          navigation, and a polished design that represents an institution with credibility.</div>
+        <div class="project-desc">A clean, professional school web presence built under the DevJero brand. Demonstrates real-world client work — structured content, intuitive navigation, and a polished design that represents an institution with credibility.</div>
         <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">Tailwind CSS</span>
+          <span class="tag">React</span><span class="tag">Tailwind CSS</span>
         </div>
         <a href="https://school-demo-ochre.vercel.app/" target="_blank" class="project-link">View Project →</a>
       </div>
@@ -207,14 +153,9 @@
       <div class="project-card reveal">
         <div class="project-num">004</div>
         <div class="project-title">Event Management</div>
-        <div class="project-desc">A cloud-connected event management system with full user
-          authentication, role-based admin access, live statistics, and push notifications
-          to registered users. Solves a real institutional problem — tracking and
-          communicating school events at scale.</div>
+        <div class="project-desc">A cloud-connected event management system with full user authentication, role-based admin access, live statistics, and push notifications to registered users. Solves a real institutional problem — tracking and communicating school events at scale.</div>
         <div class="project-tags">
-          <span class="tag">React</span>
-          <span class="tag">FastAPI</span>
-          <span class="tag">Firebase</span>
+          <span class="tag">React</span><span class="tag">FastAPI</span><span class="tag">Firebase</span>
         </div>
         <a href="https://jerogh.github.io/Schoolevent/" target="_blank" class="project-link">View Project →</a>
       </div>
@@ -222,14 +163,9 @@
       <div class="project-card reveal">
         <div class="project-num">005</div>
         <div class="project-title">Webapp Game — Catch It</div>
-        <div class="project-desc">A fast-paced browser game built purely for fun — catch the
-          moving target before the 30-second timer runs out. Features a live score tracker,
-          personal high score, and a leaderboard. Sometimes the best projects are the ones
-          that just make people smile 😂</div>
+        <div class="project-desc">A fast-paced browser game built purely for fun — catch the moving target before the 30-second timer runs out. Features a live score tracker, personal high score, and a leaderboard. Sometimes the best projects are the ones that just make people smile 😂</div>
         <div class="project-tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
+          <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
         </div>
         <a href="https://jerogh.github.io/catchit/" target="_blank" class="project-link">View Project →</a>
       </div>
@@ -241,14 +177,12 @@
   <!-- SKILLS -->
   <section id="skills">
     <div class="section-label">03 — Skills</div>
-
     <div class="skills-layout reveal">
       <div class="skills-intro">
         <h2>Tech<br><span style="color:var(--accent)">Stack.</span></h2>
         <p>My toolkit spans the full development lifecycle — from architecting systems to shipping polished UIs.</p>
         <p>I pick the right tool for the job, not the trendy one.</p>
       </div>
-
       <div class="skills-categories">
         <div>
           <div class="skills-category-title">Frontend</div>
@@ -279,13 +213,11 @@
   <!-- CONTACT -->
   <section id="contact-section">
     <div class="section-label">04 — Contact</div>
-
     <div class="contact-grid">
 
       <div class="contact-info reveal">
         <h2>Let's Build<br><span style="color:var(--accent)">Together.</span></h2>
-        <p>Have a project in mind or want to discuss an opportunity?
-          I'm always open to interesting conversations and collaborations.</p>
+        <p>Have a project in mind or want to discuss an opportunity? I'm always open to interesting conversations and collaborations.</p>
         <div class="contact-links">
           <a href="mailto:jerosammy5@gmail.com" class="contact-link">
             <span class="contact-icon">✉</span> jerosammy5@gmail.com
@@ -315,7 +247,8 @@
           <label class="form-label">Message</label>
           <textarea id="message" class="form-textarea" placeholder="Tell me about your project..."></textarea>
         </div>
-        <button class="btn btn-primary btn-send" onclick="handleSend(this)">Send Message</button>
+        <!-- Note: onclick is removed — the button is wired up by the module script below -->
+        <button class="btn btn-primary btn-send" id="sendBtn">Send Message</button>
       </div>
 
     </div>
@@ -331,7 +264,80 @@
     </div>
   </footer>
 
+  <!-- Regular scripts first -->
   <script src="script.js"></script>
+
+  <!--
+    EmailJS module — must be type="module".
+    Placed at the very bottom so the DOM (including #sendBtn) is fully loaded.
+    This handles the entire send flow — no onclick needed on the button.
+  -->
+  <script type="module">
+    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm';
+
+    // public key
+    emailjs.init('NYTeMITLtP1Gc9HD0'); 
+
+    const btn = document.getElementById('sendBtn');
+
+    btn.addEventListener('click', () => {
+      const name    = document.getElementById('from_name').value.trim();
+      const email   = document.getElementById('from_email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      // Validate
+      if (!name || !email || !message) {
+        btn.textContent      = 'Fill all fields!';
+        btn.style.background = '#ff5f57';
+        btn.style.color      = '#080b0f';
+        setTimeout(() => {
+          btn.textContent      = 'Send Message';
+          btn.style.background = '';
+          btn.style.color      = '';
+        }, 2000);
+        return;
+      }
+
+      // Loading state
+      btn.textContent      = 'Sending...';
+      btn.style.background = '#546e7a';
+      btn.style.color      = '#e8f0fe';
+      btn.disabled         = true;
+
+      // Send email
+      emailjs.send(
+        'service_ho517zd',   // ← your Service ID
+        'template_sienwpa',  // ← your Template ID
+        { from_name: name, from_email: email, message: message }
+      )
+      .then(() => {
+        btn.textContent      = 'Sent ✓';
+        btn.style.background = '#00ffaa';
+        btn.style.color      = '#080b0f';
+        btn.disabled         = false;
+        document.getElementById('from_name').value  = '';
+        document.getElementById('from_email').value = '';
+        document.getElementById('message').value    = '';
+        setTimeout(() => {
+          btn.textContent      = 'Send Message';
+          btn.style.background = '';
+          btn.style.color      = '';
+        }, 3000);
+      })
+      .catch(err => {
+        console.error('EmailJS error:', err);
+        btn.textContent      = 'Failed — Try Again';
+        btn.style.background = '#ff5f57';
+        btn.style.color      = '#080b0f';
+        btn.disabled         = false;
+        setTimeout(() => {
+          btn.textContent      = 'Send Message';
+          btn.style.background = '';
+          btn.style.color      = '';
+        }, 3000);
+      });
+    });
+  </script>
 
 </body>
 </html>
