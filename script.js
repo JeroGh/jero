@@ -1,4 +1,6 @@
-
+/* ============================================================
+   PORTFOLIO — script.js
+   ============================================================ */
 
 
 /* ---- CUSTOM CURSOR ---- */
@@ -101,6 +103,18 @@ function handleSend(btn) {
     return;
   }
 
+  // window.emailjs is set by the <script type="module"> in index.html
+  // If it hasn't loaded yet, warn and stop
+  if (!window.emailjs) {
+    btn.textContent      = 'Loading... Try again';
+    btn.style.background = 'var(--muted)';
+    setTimeout(() => {
+      btn.textContent      = 'Send Message';
+      btn.style.background = '';
+    }, 2000);
+    return;
+  }
+
   // Show loading state
   btn.textContent      = 'Sending...';
   btn.style.background = 'var(--muted)';
@@ -108,9 +122,10 @@ function handleSend(btn) {
   btn.disabled         = true;
 
   // Send via EmailJS
-  emailjs.send(
-    'service_ho517zd',      // Your Service ID
-    'template_sienwpa',       // Your Template ID
+  // Replace the values below with your actual IDs from emailjs.com
+  window.emailjs.send(
+    'service_ho517zd',   // ← your Service ID
+    'template_sienwpa',  // ← your Template ID
     {
       from_name:  name,
       from_email: email,
@@ -124,7 +139,7 @@ function handleSend(btn) {
     btn.style.color      = 'var(--bg)';
     btn.disabled         = false;
 
-    // Clear fields
+    // Clear the form
     document.getElementById('from_name').value  = '';
     document.getElementById('from_email').value = '';
     document.getElementById('message').value    = '';
