@@ -1,5 +1,4 @@
-// EmailJS  PUBLIC_KEY
-emailjs.init('9Fk_ljHZ4WIhbP5mA');
+
 
 
 /* ---- CUSTOM CURSOR ---- */
