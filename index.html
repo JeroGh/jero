@@ -3,27 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" 
-      
   <link rel="icon" type="image/png" href="fav.png">
   <title>My-Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
-  <!-- EmailJS — sends real emails from the contact form, no backend needed -->
+  <!--
+    EmailJS — loads as an ES module (no eval, works on GitHub Pages).
+    1. Replace YOUR_PUBLIC_KEY with your key from: EmailJS → Account → API Keys
+    2. The window.emailjs line makes it available to script.js
+  -->
   <script type="module">
-  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm';
-  window.emailjs = emailjs;
-  emailjs.init('9Fk_ljHZ4WIhbP5mA');
-</script>
+    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm';
+    window.emailjs = emailjs;
+    emailjs.init('9Fk_ljHZ4WIhbP5mA'); 
+  </script>
 </head>
 <body>
 
+  <!-- Custom cursor -->
   <div class="cursor" id="cursor"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
 
-  <!--nav-->
+  <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">&lt;<span>dev</span>/Jero&gt;</a>
 
@@ -41,6 +44,7 @@
     </button>
   </nav>
 
+  <!-- Mobile overlay menu -->
   <div class="nav-mobile-menu" id="mobileMenu">
     <a href="#about"           class="mobile-link">About</a>
     <a href="#projects"        class="mobile-link">Projects</a>
@@ -49,7 +53,7 @@
   </div>
 
 
-  <!--hero-->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-grid"></div>
     <div class="hero-glow"></div>
@@ -73,7 +77,7 @@
         <a href="#contact-section" class="btn btn-outline">Get in Touch</a>
       </div>
 
-      <!-- Mobile stats -->
+      <!-- Stats row on mobile -->
       <div class="hero-stats-mobile">
         <div class="stat">
           <div class="stat-num">4+</div>
@@ -90,7 +94,7 @@
       </div>
     </div>
 
-    <!-- Desktop stats -->
+    <!-- Stats column on desktop -->
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-num">4+</div>
@@ -108,13 +112,14 @@
   </section>
 
 
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="section-label">01 — About</div>
 
     <div class="about-grid reveal">
 
       <div class="about-text">
+        <h2>I build things<br>that <span style="color:var(--accent)">work.</span></h2>
         <p>Hi, I'm <strong>Samuel Tetteh Martey</strong>, a <strong>front-end developer</strong> with a passion for building high-quality software that truly connects with users. From dynamic real estate platforms to fast-paced web games, I turn complex ideas into clean, scalable digital products.</p>
         <p>I am constantly expanding my toolkit across the full development lifecycle. While my core strength lies in modern front-end technologies, I have a deep and growing interest in <strong>cloud computing</strong> and building robust, user-centric interfaces.</p>
         <p>I believe the best code is the code that's <strong>never written</strong> — prioritizing elegant simplicity over unnecessary complexity.</p>
@@ -131,6 +136,7 @@
           <div class="output highlight">samuel-tetteh-martey --alias devjero</div>
           <div class="line"><span class="prompt">~$</span><span class="cmd">cat values.txt</span></div>
           <div class="output">clean code · hci · cloud architecture</div>
+          <div class="line"><span class="prompt">~$</span><span class="cmd">git log --oneline -5</span></div>
           <div class="output">a3f1c2e refactor auth service</div>
           <div class="output">b8d9012 add real-time notifications</div>
           <div class="output">c4e7a90 optimize DB queries 40%</div>
@@ -149,7 +155,7 @@
   </section>
 
 
-  <!-- Projects -->
+  <!-- PROJECTS -->
   <section id="projects">
     <div class="section-label">02 — Projects</div>
     <h2>Selected <span style="color:var(--accent)">Work.</span></h2>
@@ -160,9 +166,9 @@
         <div class="project-num">001 — Featured</div>
         <div class="project-title">GenzVibe</div>
         <div class="project-desc">An anonymous social platform built for Gen Z — post thoughts,
-        react to vibes, and connect without the pressure of identity.
-        Features real-time feeds, live interactions, and a clean UI
-        designed for speed and self-expression.</div>
+          react to vibes, and connect without the pressure of identity.
+          Features real-time feeds, live interactions, and a clean UI
+          designed for speed and self-expression.</div>
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">Vanilla JS</span>
@@ -175,7 +181,9 @@
       <div class="project-card reveal">
         <div class="project-num">002</div>
         <div class="project-title">Real Estate Site</div>
-        <div class="project-desc">A modern, fully responsive real estate platform showcasing property listings with dynamic search and filtering. Designed with a sleek, conversion-focused UI that works seamlessly across desktop and mobile.</div>
+        <div class="project-desc">A modern, fully responsive real estate platform showcasing
+          property listings with dynamic search and filtering. Designed with a sleek,
+          conversion-focused UI that works seamlessly across desktop and mobile.</div>
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">Tailwind CSS</span>
@@ -186,7 +194,9 @@
       <div class="project-card reveal">
         <div class="project-num">003</div>
         <div class="project-title">School Webpage</div>
-        <div class="project-desc">A clean, professional school web presence built under the DevJero brand. Demonstrates real-world client work — structured content, intuitive navigation, and a polished design that represents an institution with credibility.</div>
+        <div class="project-desc">A clean, professional school web presence built under the
+          DevJero brand. Demonstrates real-world client work — structured content, intuitive
+          navigation, and a polished design that represents an institution with credibility.</div>
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">Tailwind CSS</span>
@@ -197,7 +207,10 @@
       <div class="project-card reveal">
         <div class="project-num">004</div>
         <div class="project-title">Event Management</div>
-        <div class="project-desc">A cloud-connected event management system with full user authentication, role-based admin access, live statistics, and push notifications to registered users. Solves a real institutional problem — tracking and communicating school events at scale.</div>
+        <div class="project-desc">A cloud-connected event management system with full user
+          authentication, role-based admin access, live statistics, and push notifications
+          to registered users. Solves a real institutional problem — tracking and
+          communicating school events at scale.</div>
         <div class="project-tags">
           <span class="tag">React</span>
           <span class="tag">FastAPI</span>
@@ -208,11 +221,11 @@
 
       <div class="project-card reveal">
         <div class="project-num">005</div>
-        <div class="project-title">Webapp Game Catch it</div>
+        <div class="project-title">Webapp Game — Catch It</div>
         <div class="project-desc">A fast-paced browser game built purely for fun — catch the
-        moving target before the 30-second timer runs out. Features
-        a live score tracker, personal high score, and a leaderboard.
-        Sometimes the best projects are the ones that just make people smile 😂</div>
+          moving target before the 30-second timer runs out. Features a live score tracker,
+          personal high score, and a leaderboard. Sometimes the best projects are the ones
+          that just make people smile 😂</div>
         <div class="project-tags">
           <span class="tag">HTML</span>
           <span class="tag">CSS</span>
@@ -225,7 +238,7 @@
   </section>
 
 
-  <!-- Skills -->
+  <!-- SKILLS -->
   <section id="skills">
     <div class="section-label">03 — Skills</div>
 
@@ -263,7 +276,7 @@
   </section>
 
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact-section">
     <div class="section-label">04 — Contact</div>
 
@@ -284,7 +297,7 @@
             <span class="contact-icon">⊞</span> linkedin.com/in/yourname
           </a>
           <a href="tel:+233274254825" class="contact-link">
-            <span class="contact-icon">◈</span> 0274254825
+            <span class="contact-icon">◈</span> +233 274 254 825
           </a>
         </div>
       </div>
@@ -292,7 +305,6 @@
       <div class="contact-form reveal">
         <div class="form-group">
           <label class="form-label">Name</label>
-          <!-- id attributes are required — script.js reads these values to send the email -->
           <input type="text" id="from_name" class="form-input" placeholder="Your name">
         </div>
         <div class="form-group">
@@ -310,7 +322,7 @@
   </section>
 
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2026 — Designed &amp; Built by DevJero</p>
     <div class="footer-status">
