@@ -242,6 +242,7 @@
   <div class="form-group">
     <label class="form-label">Email</label>
     <input type="email" name="email" class="form-input" placeholder="your@email.com" required>
+    <input type="hidden" name="_next" value="https://jerogh.github.io/#contact-section">
   </div>
   <div class="form-group">
     <label class="form-label">Message</label>
@@ -264,77 +265,7 @@
   <!-- Regular scripts first -->
   <script src="script.js"></script>
 
-  <!--
-    EmailJS module — must be type="module".
-    Placed at the very bottom so the DOM (including #sendBtn) is fully loaded.
-    This handles the entire send flow — no onclick needed on the button.
-  -->
-  <script type="module">
-    import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm';
-
-    // public key
-    emailjs.init('NYTeMITLtP1Gc9HD0'); 
-
-    const btn = document.getElementById('sendBtn');
-
-    btn.addEventListener('click', () => {
-      const name    = document.getElementById('from_name').value.trim();
-      const email   = document.getElementById('from_email').value.trim();
-      const message = document.getElementById('message').value.trim();
-
-      // Validate
-      if (!name || !email || !message) {
-        btn.textContent      = 'Fill all fields!';
-        btn.style.background = '#ff5f57';
-        btn.style.color      = '#080b0f';
-        setTimeout(() => {
-          btn.textContent      = 'Send Message';
-          btn.style.background = '';
-          btn.style.color      = '';
-        }, 2000);
-        return;
-      }
-
-      // Loading state
-      btn.textContent      = 'Sending...';
-      btn.style.background = '#546e7a';
-      btn.style.color      = '#e8f0fe';
-      btn.disabled         = true;
-
-      // Send email
-      emailjs.send(
-        'service_ho517zd',   // ← your Service ID
-        'template_sienwpa',  // ← your Template ID
-        { from_name: name, from_email: email, message: message }
-      )
-      .then(() => {
-        btn.textContent      = 'Sent ✓';
-        btn.style.background = '#00ffaa';
-        btn.style.color      = '#080b0f';
-        btn.disabled         = false;
-        document.getElementById('from_name').value  = '';
-        document.getElementById('from_email').value = '';
-        document.getElementById('message').value    = '';
-        setTimeout(() => {
-          btn.textContent      = 'Send Message';
-          btn.style.background = '';
-          btn.style.color      = '';
-        }, 3000);
-      })
-      .catch(err => {
-        console.error('EmailJS error:', err);
-        btn.textContent      = 'Failed — Try Again';
-        btn.style.background = '#ff5f57';
-        btn.style.color      = '#080b0f';
-        btn.disabled         = false;
-        setTimeout(() => {
-          btn.textContent      = 'Send Message';
-          btn.style.background = '';
-          btn.style.color      = '';
-        }, 3000);
-      });
-    });
-  </script>
+ 
 
 </body>
 </html>
